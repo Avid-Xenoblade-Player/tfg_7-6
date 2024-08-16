@@ -1,17 +1,29 @@
-body {
-    background: #fff; /* Default background color */
-    background-image: url(start_screens/red_start_screen.png);
+body { /* Body for homepage */
+  background-attachment: fixed; /* Image doesn't move */
+  background-size: cover; /* Fill the whole page */
+  animation: 
+  fade 3.5s steps(40, end); /* Fade in for 3.5 seconds */
+  /*start_screen 20s infinite;*/
+  background-color: #E40303; 
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0%; /* At the start, invisible. */
   }
-  
-  /* Fade-in animation */
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+  100% {
+    opacity: 100%; /* At the end, fully visible. */
   }
+}
+
+div.start_screen { /* Div for .txt posts */
+  width: 85%; 
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #00000000;
+}
+
+img {
+  padding-left: 174px;
+  padding-right: 174px;
+}
